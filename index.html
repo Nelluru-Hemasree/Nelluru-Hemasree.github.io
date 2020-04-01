@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function toggle_visibility(id) {
+           var home=document.getElementById("home");
+           var about=document.getElementById("about");
+           var contact=document.getElementById("contact");
+           var gallery=document.getElementById("gallery");
+           if(id=="home") {
+                home.style.display='block';
+                about.style.display='none';
+                contact.style.display='none';
+                gallery.style.display='none';
+           }
+           if(id=="about") {
+                home.style.display='none';
+                about.style.display='block';
+                contact.style.display='none';
+                gallery.style.display='none';
+           }
+           if(id=="contact") {
+                home.style.display='none';
+                about.style.display='none';
+                contact.style.display='block';
+                gallery.style.display='none';
+           }
+           if(id=="gallery") {
+                home.style.display='none';
+                about.style.display='none';
+                contact.style.display='none';
+                gallery.style.display='block';
+           }
+    }
+</script>
+</head>
+<body>
+<div class="MainHeader">
+    <div class="SubHeader row">
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('home');">Home</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('about');">About</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('contact');">Contact</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('gallery');">Gallery</a>
+    </div>
+</div>
+<div class="body">
+    <div id="home">
+        <p class="headings">Ideas of Interest</p>
+        <p class="content">My name is Nelluru Hemasree,
+            I am pursuing Btech final year in the stream of Computer Science and Engineering
+            from Shri Vishnu Engineering College For Women.</p>
+    </div>
+    <div id="about" style="display:none">
+        <center style="font-size:30px; font-weight:bold;">ABOUT ME</center><br>
+        <p class="headings">Introduction</p>
+        <p class="content">I N.Hemasree, currently doing internship in ZeMoSo Technologies.</p><br>
+        <p class="headings">Technical Skills</p>
+        <ul class="content">
+            <li>Programming Languages: C,C++,Java,Python</li>
+            <li>Web Technologies: HTML,CSS,Js,Php</li>
+            <li>Operating Systems: Windows,Ubuntu</li>
+            <li>Also had good practical knowledge on Data Structures</li>
+        </ul><br>
+        <p class="headings">Co-Curricular Activities</p>
+        <p class="content">Participated in several online coding contests in Hackerrank,Codechef,Codeforces.</p><br>
+        <p class="headings">Websites</p>
+        <ul class="content">
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/nelluru-hemasree-1479a6172/">https://www.linkedin.com/in/nelluru-hemasree-1479a6172/</a></li>
+        </ul><br>
+    </div>
+    <div id="contact" style="display:none">
+        <p class="headings">To Contact Me</p>
+        <div class="container">
+            <form action="https://formspree.io/16b01a05c2@svecw.edu.in" method="post">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name.." required=""><br>
+
+                <label for="number">Contact Number</label><br>
+                <input type="text" id="number" name="number" placeholder="Your number.." required=""><br>
+                <label for="email">Email</label><br>
+                <input type="text" id="email" name="email" placeholder="Your email.." required=""><br>
+
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" placeholder="Write something.."  rows="3"></textarea><br>
+
+                <input type="submit" value="Send" style="background-color:skyblue; height:30px;width:70px;">
+            </form>
+        </div>
+    </div>
+    <div id="gallery" style="display:none">
+        <div >
+            <img src="zemoso.jpeg"/>
+            <img src="zemoso2.jpeg"/>
+            <img src="zemoso1.jpeg"/>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
